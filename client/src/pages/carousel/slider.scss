@@ -1,0 +1,23 @@
+.height {
+    height: 365px;
+}
+
+@media screen and(max-width: 768px) {
+  .height {
+    height: 250px;
+  } 
+}
+
+@media only screen and (max-width: 425px){
+  .height {
+    height: 160px;
+  } 
+  .xs-device-front{
+    h3{
+      font-size: 10px;
+    }
+    p{
+      font-size: 7px;
+    }
+  }
+}

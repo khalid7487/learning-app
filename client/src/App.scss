@@ -1,0 +1,60 @@
+// Your variable overrides
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~react-pro-sidebar/dist/scss/styles.scss";
+@import "~react-notifications-component/dist/theme.css";
+
+// hide nav bar when desktop toggle
+.pro-sidebar {
+  //color: #0984e3;
+  ::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+    border: 1px solid #d5d5d5;
+  }
+}
+
+.pro-sidebar.sm.collapsed {
+  margin-left: -80px;
+}
+
+.corpus-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.pro-sidebar .pro-menu .pro-menu-item.pro-sub-menu .pro-inner-list-item .pro-inner-item:before {
+  width: 10px;
+  height: 10px;
+}
+.pro-icon-wrapper {
+  width: 2px;
+  height: 2px;
+}
+
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    max-width: 95%;
+  }
+}
+
+.top-left {
+  position: absolute;
+  top: 90px;
+  left: 100px;
+}
+
+.background-img {
+  height: 350px;
+  width: 100%;
+  z-index: -999;
+}
+
+.shadow-lg{
+  box-shadow: 0 1px 5px rgba(0,0,0,.1)!important
+}

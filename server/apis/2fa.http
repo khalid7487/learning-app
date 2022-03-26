@@ -1,0 +1,28 @@
+###
+GET http://localhost:7001/api/v1/google2fa
+Content-Type: application/json
+
+### Register a secrect for New Client Application
+POST http://localhost:7001/api/v1/google2fa/totp-secret
+Content-Type: application/json
+
+
+### Get Time-based One-Time Password (TOTP)
+POST http://localhost:7001/api/v1/google2fa/totp-generate
+Content-Type: application/json
+
+{
+    "secret": "EZGVCOBSFRQTG6K5IBGSMWRMH56UCUKL",
+    "encoding": ""
+}
+
+
+### 
+POST http://localhost:7001/api/v1/google2fa/totp-validate
+Content-Type: application/json
+
+{
+    "secret": "EZGVCOBSFRQTG6K5IBGSMWRMH56UCUKL",
+    "token": "950661",
+    "encoding": ""
+}

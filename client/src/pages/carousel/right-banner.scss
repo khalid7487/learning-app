@@ -1,0 +1,15 @@
+.right-sidebar{
+    display: flex;
+    justify-content: center;
+
+    margin-right: 10px;
+    img{
+        height: 365px;
+        width: 145px;
+    }
+}
+ @media screen and(max-width: 1024px) {
+    .right-sidebar{
+        display: none;
+    }
+ }

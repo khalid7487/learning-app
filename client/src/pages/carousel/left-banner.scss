@@ -1,0 +1,22 @@
+.left-banner{
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    img{
+        height: 365px;
+        width: 145px;
+    }
+}
+@media screen and(max-width: 768px) {
+    .left-banner{
+        img{
+            height: 250px;
+            width: 145px;
+        }
+    }
+ }
+ @media only screen and (max-width: 425px){
+    .left-banner{
+        display: none;
+    }
+}

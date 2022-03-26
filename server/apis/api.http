@@ -1,0 +1,101 @@
+
+### 
+POST http://localhost:7001/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstname": "Md.Sadhan",
+  "lastname": "Sarker",
+  "phone": "01730594127",
+  "email": "sadhan@gmail.com",
+  "password": "123456"
+}
+
+### rentcar registration
+POST http://localhost:7001/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "role_ids": "[1]",
+  "firstname": "Sadhan",
+  "lastname": "Sarker",
+  "email": "admin@gmail.com",
+  "phone": "01725620378",
+  "password": "123456",
+  "address": "Dhaka",
+  "identity": {
+    "nid_no": "5559955595",
+    "nid_front": "",
+    "nid_back": "",
+    "passport_no": "59556",
+    "passport_front": "",
+    "passport_back": ""
+  }
+}
+
+
+###
+POST http://localhost:7001/api/v1/auth/login
+#POST http://tms.techtoolspro.com:7001/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "phone": "01725620378",
+  "password": "123456"
+}
+
+###
+GET http://localhost:7001/api/v1/auth/roles
+Content-Type: application/json
+
+
+###
+GET http://tms.techtoolspro.com:7001/uploads/01725620373/driving_licence_front.jpg
+Content-Type: application/json
+
+
+
+###
+POST http://localhost:7001/api/v1/auth/roles
+Content-Type: application/json
+Authorization: Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjAxNzI1NjIwMzczIiwiaWF0IjoxNjMxOTg0ODcwLCJleHAiOjE2MzI4NDg4NzB9.v7YyQ7NTktueKu8u7HY3kNOrSeYIdotgCBQr9U15dFw
+
+[
+  {
+    "name": "ADMIN",
+    "code": "ADMIN",
+    "description": "TO ADMIN"
+  },
+  {
+    "name": "User",
+    "code": "USER",
+    "description": "USER"
+  },
+  {
+    "name": "TEACHER",
+    "code": "TEACHER",
+    "description": "TEACHER"
+  }
+]
+
+
+###
+GET http://localhost:7001/api/v1/auth/me
+Content-Type: application/json
+
+
+
+###
+GET http://localhost:7001/api/v1/auth/me
+Content-Type: application/json
+Authorization: Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjAxNzMwNTk0MTI3IiwiaWF0IjoxNjMxOTUwNjEzLCJleHAiOjE2MzI4MTQ2MTN9.xdEY2obfiFl7ZzAGmJ6IzuOrAKbGxTN7sH9D9Zo-qZ0
+
+
+###
+GET http://localhost:7001/
+Content-Type: application/json
+
+
+###
+GET http://localhost:7001/api/v1/auth/logout
+Content-Type: application/json

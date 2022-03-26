@@ -1,0 +1,14 @@
+.home-page-section{
+    margin: 10px;
+    .header-top{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        grid-gap: 10px;
+        .items{
+            color: #F94A4A;
+            background: #ECECEC;
+        }
+
+    }
+}
