@@ -208,6 +208,8 @@ export const GetRoles = async () => {
 export const AddRoles = async (req, res) => {
     const {name, code, description} = req.body
 
+    console.log(req.body)
+
     try {
         let errors: any = {}
         //errors = await validate(user)

@@ -9,7 +9,7 @@ const databaseProviders = async (name: string) => {
                 name: 'default',
                 type: 'postgres',
                 port: 5432,
-                synchronize: false,    // table or entity creation or update
+                synchronize: true,    // table or entity creation or update
                 logging: false,       // sql log in runtime
 
                 host: process.env.DB_HOST,

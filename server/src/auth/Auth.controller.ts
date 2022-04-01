@@ -1,7 +1,7 @@
-import {Request, Response, Router} from "express";
+import { Request, Response, Router } from "express";
 import cookie from "cookie";
 import osutils from "os-utils"
-import {User} from "./User.entity";
+import { User } from "./User.entity";
 
 import auth from "../middleware/auth"
 import {
@@ -29,7 +29,7 @@ router.post('/upload', async (req: any, res: Response) => {
 
     try {
         if (!req.files) {
-            return res.status(200).json({status: false, message: 'No file uploaded'})
+            return res.status(200).json({ status: false, message: 'No file uploaded' })
         } else {
             let file = req.files.avatar;
 
@@ -75,9 +75,10 @@ router.get('/get-role-by-id/:roleId', auth, async (req: any, res: Response) => {
     return res.status(200).json(userStatus)
 })
 
-router.post('/roles', auth, async (req: Request, res: Response) => {
+router.post('/roles', async (req: Request, res: Response) => {
 
     let roles = await AddRoles(req, res);
+
     return res.status(201).json(roles)
 
 })
@@ -112,7 +113,7 @@ router.post('/forget', auth, async (req: Request, res: Response) => {
         // Validate date
         let errors: any = {}
 
-        const isPhoneExists = await User.findOne({phone})
+        const isPhoneExists = await User.findOne({ phone })
 
         if (!isPhoneExists) errors.phone = 'Phone Number does not exits';
         if (Object.keys(errors).length > 0) {
@@ -145,7 +146,7 @@ router.get('/logout', auth, (req: Request, res: Response) => {
         path: '/'
     }))
 
-    return res.status(200).json({success: true})
+    return res.status(200).json({ success: true })
 })
 
 router.post('/user-info', auth, async (req: Request, res: Response) => {
